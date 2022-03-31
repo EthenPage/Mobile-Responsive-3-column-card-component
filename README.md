@@ -26,10 +26,12 @@ Users should be able to:
 ## Links
 
 - Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Live Site URL: [Live](https://ethenpage.github.io/Mobile-Responsive-3-column-card-component/)
 
 ## Issue
-- Needs to continous development by using flexbox or grid.
+- Needs to continous development by using flexbox or grid. 
+- Issue detected: 1024px device due to `<p>` padding.
+
 ![](./issue.jpg)
 
 ## Author
