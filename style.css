@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* 
+font-family: 'Big Shoulders Display', cursive;      (400)
+font-family: 'Lexend Deca', sans-serif;     (700)
+*/
+
+*,
+::after, 
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+/* Primary colors */
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark: hsl(179, 100%, 13%);
+
+/* Neutral colors */
+    --white: hsla(0, 0%, 100%, 0.75);   /*  paragraphs  */
+    --gray: hsl(0, 0%, 95%);    /*  background, headings, buttons   */
+}
+
+body{
+    background-color: var(--gray);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.card{
+    width: 375px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.card--orange{
+    background-color: var(--orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.card--cyan{
+    background-color: var(--cyan);
+}
+
+.card--dark{
+    background-color: var(--dark);
+    border-radius: 0 0 10px 10px;
+}
+
+/* img */
+.card__img{
+    display: block;
+    margin-bottom: 40px;
+}
+
+/* h1 */
+.card__headline{
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;     
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font-size: 2.3rem;
+    color: whitesmoke;
+}
+
+/* p */
+.card__desc{
+    font-family: 'Lexend Deca', sans-serif;     
+    line-height: 1.7;
+    font-size: 0.9375rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+}
+
+/* a */
+.btn{
+    text-decoration: none;
+    background-color: var(--gray);
+    display: block;
+    width: fit-content;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'Lexend Deca', sans-serif;     
+    letter-spacing: 1px;
+    border: 2px solid var(--gray);
+    transition: background-color 0.20s ease;
+}
+
+.btn--orange{
+    color: var(--orange);
+}
+
+.btn--cyan{
+    color: var(--cyan);
+}
+
+.btn--dark{
+    color: var(--dark);
+}
+
+/* Extra */
+.attribution {
+    background-color: hsl(0, 0%, 62%);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 11px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+  }
+
+  .attribution a {
+    color: var(--dark);
+  }
+
+/* For medium and small mobiles */
+@media only screen and (max-width : 375px) {
+    .card--orange, .card--dark{
+        border-radius: 0;
+    }
+
+    .btn{
+        padding: 10px 25px;
+    }   
+}
+
+/* For all types of devices */
+@media only screen and (max-width : 1024px) and (min-width : 380px) {
+    .container{
+        margin-top: clamp(5%, 2vw, 10%);
+    }
+}
+
+/* For Desktop and laptop */
+@media only screen and (min-width : 1024px) {
+    .container{
+        width: 95%;
+        max-width: 1125px;
+        display: flex;
+        margin: 50px auto 0 auto;
+    }
+
+    .card--orange{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card--dark{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .card__desc{
+        margin-bottom: 80px;
+    }
+
+    .btn:hover{
+        background-color: inherit;
+        color: var(--gray);
+    }
+}
